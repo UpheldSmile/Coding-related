@@ -99,29 +99,30 @@ return
 ;lSleep(pingAdjustment)
 Loop, 5
 {
-DllCall("QueryPerformanceCounter", "Int64*", externalStart)
-SendInput {MButton}
-lSleep(betweenP_P, externalStart)
-DllCall("QueryPerformanqceCounter", "Int64*", externalStart)
-SendInput {MButton}
-lSleep(betweenP_R, externalStart)
-DllCall("QueryPerformanceCounter", "Int64*", externalStart)
-SendInput {f5}
-lSleep(4)
-SendInput {q}
-lSleep(20)
-SendInput {f8}
-lSleep(18)
+	DllCall("QueryPerformanceCounter", "Int64*", externalStart)
+	SendInput {MButton}
+	lSleep(betweenP_P, externalStart)
+	DllCall("QueryPerformanqceCounter", "Int64*", externalStart)
+	SendInput {MButton}
+	lSleep(betweenP_R, externalStart)
+	DllCall("QueryPerformanceCounter", "Int64*", externalStart)
+	SendInput {f5}
+	lSleep(4)
+	SendInput {q}
+	lSleep(20)
+	SendInput {f8}
+	lSleep(18)
 
-loop 80 {
-	SendInput {LButton}
-	lSleep(10)
-	}
-lSleep(15300, externalStart)
-lSleep(desiredLimbTime, externalStart)
+		loop 80
+		{
+			SendInput {LButton}
+			lSleep(10)
+		}
+	lSleep(15300, externalStart)
+	lSleep(desiredLimbTime, externalStart)
 }
-return
 
+return
 
 ;-------------------------- TERRY MACRO --------------------------
 
@@ -130,17 +131,18 @@ return
 SetTimer, swap, -200
 Loop, 4
 {
-DllCall("QueryPerformanceCounter", "Int64*", externalStart)
-SendInput {MButton}
-lSleep(betweenP_Z, externalStart)
-DllCall("QueryPerformanceCounter", "Int64*", externalStart)
-SendInput {LButton}
-lSleep(20)
-SendInput {RButton Up}
-SetTimer, swap, -15800
-lSleep(15300, externalStart)
-lSleep(desiredLimbTime, externalStart)
+	DllCall("QueryPerformanceCounter", "Int64*", externalStart)
+	SendInput {MButton}
+	lSleep(betweenP_Z, externalStart)
+	DllCall("QueryPerformanceCounter", "Int64*", externalStart)
+	SendInput {LButton}
+	lSleep(20)
+	SendInput {RButton Up}
+	SetTimer, swap, -15800
+	lSleep(15300, externalStart)
+	lSleep(desiredLimbTime, externalStart)
 }
+
 return
 
 swap:
@@ -181,9 +183,10 @@ lSleep(80)
 SendInput {Tab} ;AW
 MoveMouse(1180, 270)
 lSleep(900)
-loop 5 {
-SendInput {LButton}
-lSleep(10)
+loop 5 
+{
+	SendInput {LButton}
+	lSleep(10)
 }
 ;BlockInput, Off
 
@@ -192,57 +195,59 @@ Return
 
 ;-------------------------- WATER MACRO test --------------------------
 m::
-;		BlockInput, On
-		MoveMouse(-460,-225)
-		lSleep(80)
-		SendInput {[ Down}
-		SendInput {W Down}
-		lSleep(294)
-		SendInput {W Up}
-		MoveMouse(0, 700)
-		lSleep(100)
-		SendInput {q}
-		lSleep(210)
-		SendInput {5}
-		lSleep(10)
-		;SendInput {w down}
-		lSleep(70)
-		MoveMouse(0, -280)
-		lSleep(150)
-		;SendInput {w Up}
-		SendInput {e}
-		;lSleep(510)
-		;SendInput {e}
-		lSleep(50)
-		SendInput {q}
-		MoveMouse(-1480, -330)
-		lSleep(100)
-		;SendInput {f8}
-		lSleep(100)
-		;SendInput {RButton Down}
-		loop 10 {
-			PixelSearch, newX, newY, startX, startY, endX, endY, FF00D2, 3, Fast RGB
+;	BlockInput, On
+	MoveMouse(-460,-225)
+	lSleep(80)
+	SendInput {[ Down}
+	SendInput {W Down}
+	lSleep(294)
+	SendInput {W Up}
+	MoveMouse(0, 700)
+	lSleep(100)
+	SendInput {q}
+	lSleep(210)
+	SendInput {5}
+	lSleep(10)
+	;SendInput {w down}
+	lSleep(70)
+	MoveMouse(0, -280)
+	lSleep(150)
+	;SendInput {w Up}
+	SendInput {e}
+	;lSleep(510)
+	;SendInput {e}
+	lSleep(50)
+	SendInput {q}
+	MoveMouse(-1480, -330)
+	lSleep(100)
+	;SendInput {f8}
+	lSleep(100)
+	;SendInput {RButton Down}
+	loop 10 
+		{
+		PixelSearch, newX, newY, startX, startY, endX, endY, FF00D2, 3, Fast RGB
         	MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
-			lSleep(10)
+		lSleep(10)
 		}
-		lSleep(100)
-		;MoveMouse(-10, 10)
-		;lSleep(100)
-		BlockInput, Off
-		loop 80 {
-			SendInput {LButton}
-			lSleep(10)
-			}
-		SendInput {[ Up}
-		;SendInput {RButton Up}
-		Return
+		
+	lSleep(100)
+	;MoveMouse(-10, 10)
+	;lSleep(100)
+	BlockInput, Off
+	loop 80 {
+		SendInput {LButton}
+		lSleep(10)
+		}
+	SendInput {[ Up}
+	;SendInput {RButton Up}
+Return
 ;---------------- Gantu Prefire --------------------------
 
 
 ;*shift::
 SetTimer, Shard, 10
 loop
- PixelSearch, pX, pY, 714, 931, 960, 1000, 0x2A27B5, 20, Fast 
+ 	PixelSearch, pX, pY, 714, 931, 960, 1000, 0x2A27B5, 20, Fast 
 until (ErrorLevel == 0)
 ;MsgBox, I see shrine
 GoSub, DPS
@@ -281,8 +286,8 @@ SendInput {Tab} ;AW
 MoveMouse(1180, 270)
 lSleep(900)
 loop 5 {
-SendInput {LButton}
-lSleep(10)
+	SendInput {LButton}
+	lSleep(10)
 }
 
 a:=0
@@ -290,8 +295,8 @@ while a < 5
 		{
 		PixelSearch, pX, pY, 1230, 670, 1330, 770, 0x48F5E4, 10, Fast ; CL
 		if (ErrorLevel == 0)
-		{
-		Return
+			{
+			Return
 		}
 		
 		a++
@@ -302,8 +307,8 @@ while b < 20
 		PixelSearch, pX, pY, 1550, 500, 1700, 650, 0x87AF98, 20, Fast ; CR
 		if (ErrorLevel == 0)
 		{
-			;-------------------------- CR --------------------------
-	MoveMouse(-45,-290)
+;-------------------------- CR --------------------------
+			MoveMouse(-45,-290)
 			lSleep(20)
 			SendInput {[ Down}
 			SendInput {W Down}
@@ -327,10 +332,10 @@ while b < 20
 			MoveMouse(-1285, -180)
 			lSleep(100)
 			loop 10 {
-			PixelSearch, newX, newY, startX, startY, endX, endY, FF00D2, 3, Fast RGB
-        	MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
-			lSleep(10)
-		}
+				PixelSearch, newX, newY, startX, startY, endX, endY, FF00D2, 3, Fast RGB
+        			MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
+				lSleep(10)
+			}
 			BlockInput, Off
 			SendInput {[ Up}
 			;SendInput {RButton Down}
@@ -348,8 +353,9 @@ lSleep(70)
 PixelSearch, pX, pY, 0, 500, 200, 757, 0x203A4D, 15, Fast ;
 if (ErrorLevel == 0)
 {
-	;-------------------------- Mid --------------------------
-			BlockInput, On
+
+;-------------------------- Mid --------------------------
+		BlockInput, On
 		MoveMouse(-460,-225)
 		lSleep(80)
 		SendInput {[ Down}
@@ -379,7 +385,7 @@ if (ErrorLevel == 0)
 		;SendInput {RButton Down}
 		loop 10 {
 			PixelSearch, newX, newY, startX, startY, endX, endY, FF00D2, 3, Fast RGB
-        	MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
+        		MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
 			lSleep(10)
 		}
 		lSleep(100)
@@ -395,62 +401,60 @@ if (ErrorLevel == 0)
 		Return
 		}
 	else If (ErrorLevel == 1)
-	{
-	;-------------------------- Long --------------------------
+		{
+;-------------------------- Long --------------------------
 			
-BlockInput, On
-		MoveMouse(-1000,-256)
-				lSleep(200)
-
-		SendInput {[ Down}
-		SendInput, {Space Down}
-		lSleep(50)
-		SendInput, {Space Up}
-		lSleep(50)
-		SendInput {[}
-		lSleep(5)
-		SendInput {[ Down}
-		SendInput {W Down}
-		lSleep(256)
-		SendInput {W Up}
-		SendInput {2}
-		lSleep(100)
-		MoveMouse(-1020,550)
-		lSleep(200)
-		loop 10 {
-			PixelSearch, newX, newY, startX, startY, endX, endY, FF00D2, 3, Fast RGB
-        	MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
-			lSleep(10)
-
-		}
-		lSleep(100)
-		SendInput {q}
-		lSleep(360)
-		SendInput {5}
-		lSleep(100)
-		MoveMouse(-685,-205)
-		lSleep(150)
-		loop 10 {
-			PixelSearch, newX, newY, startX, startY, endX, endY, F4F315, 3, Fast RGB ; change colour, cant be bothered right
-        	MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
-			lSleep(1)
-		}
-		SendInput {e}
-   	lSleep(100)
-		SendInput {q}
-      lSleep(20)
-      SendInput {f8}
-      lSleep(20)
-      ;SendInput {RButton Down}
-		BlockInput, Off
-		loop 110 {
-			SendInput {LButton}
-			lSleep(10)
+			BlockInput, On
+			MoveMouse(-1000,-256)
+			lSleep(200)
+			SendInput {[ Down}
+			SendInput, {Space Down}
+			lSleep(50)
+			SendInput, {Space Up}
+			lSleep(50)
+			SendInput {[}
+			lSleep(5)
+			SendInput {[ Down}
+			SendInput {W Down}
+			lSleep(256)
+			SendInput {W Up}
+			SendInput {2}
+			lSleep(100)
+			MoveMouse(-1020,550)
+			lSleep(200)
+			loop 10 {
+				PixelSearch, newX, newY, startX, startY, endX, endY, FF00D2, 3, Fast RGB
+        			MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
+				lSleep(10)
 			}
-		lSleep(110)
-		SendInput {[ Up}
-     ; SendInput {RButton Up}
-		Return
+			lSleep(100)
+			SendInput {q}
+			lSleep(360)
+			SendInput {5}
+			lSleep(100)
+			MoveMouse(-685,-205)
+			lSleep(150)
+			loop 10 {
+				PixelSearch, newX, newY, startX, startY, endX, endY, F4F315, 3, Fast RGB ; change colour, cant be bothered right
+        			MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
+				lSleep(1)
+				}
+			SendInput {e}
+   			lSleep(100)
+			SendInput {q}
+     			lSleep(20)
+     			SendInput {f8}
+      			lSleep(20)
+     			;SendInput {RButton Down}
+			BlockInput, Off
+			loop 110 {
+				SendInput {LButton}
+				lSleep(10)
+				}
+			lSleep(110)
+			SendInput {[ Up}
+     			; SendInput {RButton Up}
+	Return
 		
 	}
 Return
@@ -462,7 +466,7 @@ Return
 *`::
 SetTimer, Shard, 10
 loop
- PixelSearch, pX, pY, 714, 931, 960, 1000, 0x2A27B5, 20, Fast 
+	PixelSearch, pX, pY, 714, 931, 960, 1000, 0x2A27B5, 20, Fast 
 until (ErrorLevel == 0)
 ;MsgBox, I see shrine
 GoSub, DPS_1
@@ -499,15 +503,15 @@ SendInput {Tab} ;AW
 MoveMouse(1185, 270)
 lSleep(900)
 loop 5 {
-SendInput {LButton}
-lSleep(10)
+	SendInput {LButton}
+	lSleep(10)
 }
 BlockInput, Off
 d:=0
 while d < 5
-		{
-		PixelSearch, pX, pY, 1230, 670, 1330, 770, 0x48F5E4, 3, Fast ; CL
-		if (ErrorLevel == 0)
+	{
+	PixelSearch, pX, pY, 1230, 670, 1330, 770, 0x48F5E4, 3, Fast ; CL
+	if (ErrorLevel == 0)
 		{
 		Return
 		}
@@ -519,9 +523,9 @@ while e < 30
 		{
 		PixelSearch, pX, pY, 1550, 500, 1700, 650, 0x87AF98, 25, Fast ; CR
 		if (ErrorLevel == 0)
-		{
-			;-------------------------- HYDRO CR --------------------------
-		MoveMouse(-45,-290)
+			{
+;-------------------------- Hydro CR --------------------------
+			MoveMouse(-45,-290)
 			lSleep(20)
 			SendInput {[ Down}
 			SendInput {W Down}
@@ -545,10 +549,10 @@ while e < 30
 			MoveMouse(-1285, -180)
 			lSleep(100)
 			loop 10 {
-			PixelSearch, newX, newY, startX, startY, endX, endY, FF00D2, 3, Fast RGB
-        	MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
-			lSleep(10)
-		}
+				PixelSearch, newX, newY, startX, startY, endX, endY, FF00D2, 3, Fast RGB
+        			MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
+				lSleep(10)
+			}
 			BlockInput, Off
 			SendInput {[ Up}
 			;SendInput {RButton Down}
@@ -558,7 +562,7 @@ while e < 30
 				lSleep(10)
 				}
 			;SendInput {RButton Up}
-				Return
+			Return
 		}
 		e++
 	}
@@ -566,85 +570,93 @@ lSleep(150)
 PixelSearch, pX, pY, 0, 530, 50, 580, 0x5A5A52, 5, Fast ;
 if (ErrorLevel == 0)
 {
-	;-------------------------- Hydro Mid --------------------------
-				BlockInput, On
-		MoveMouse(-470,-247)
+		BlockInput, On
+		MoveMouse(-460,-225)
 		lSleep(80)
 		SendInput {[ Down}
 		SendInput {W Down}
-		lSleep(295)
+		lSleep(294)
 		SendInput {W Up}
-		MoveMouse(0, 750)
+		MoveMouse(0, 700)
 		lSleep(100)
 		SendInput {q}
-		lSleep(150)
+		lSleep(210)
 		SendInput {5}
+		lSleep(10)
+		;SendInput {w down}
 		lSleep(70)
-		MoveMouse(0, -300)
-		lSleep(60)
+		MoveMouse(0, -320)
+		lSleep(150)
+		;SendInput {w Up}
 		SendInput {e}
-		lSleep(510)
-		SendInput {e}
+		;lSleep(510)
+		;SendInput {e}
 		lSleep(50)
 		SendInput {q}
 		MoveMouse(-1480, -330)
-		lSleep(30)
-		SendInput {f8}
-		lSleep(30)
-		SendInput {RButton Down}
+		lSleep(100)
+		;SendInput {f8}
+		lSleep(100)
+		;SendInput {RButton Down}
+		loop 10 {
+			PixelSearch, newX, newY, startX, startY, endX, endY, FF00D2, 3, Fast RGB
+        		MouseMove((newX - gScreenCenter[1])/2, (newY - gScreenCenter[2])/2)
+			lSleep(10)
+		}
+		lSleep(100)
+		;MoveMouse(-10, 10)
+		;lSleep(100)
 		BlockInput, Off
-		lSleep(500)
 		loop 80 {
 			SendInput {LButton}
 			lSleep(10)
 			}
 		SendInput {[ Up}
-		SendInput {RButton Up}
+		;SendInput {RButton Up}
 		Return
 		}
-	else If (ErrorLevel == 1)
-	{
-	;-------------------------- Hydro Long --------------------------
-	BlockInput, On
-		MoveMouse(-1000,-255)
-				lSleep(100)
-
-		SendInput {[ Down}
-		SendInput, {Space Down}
-		lSleep(50)
-		SendInput, {Space Up}
-		lSleep(50)
-		SendInput {[}
-		lSleep(5)
-		SendInput {[ Down}
-		SendInput {W Down}
-		lSleep(261)
-		SendInput {W Up}
-		lSleep(100)
-		MoveMouse(-949,450)
-		lSleep(300)
-		SendInput {q}
-		lSleep(340)
-		SendInput {5}
-		lSleep(100)
-		MoveMouse(-560,-185)
-		lSleep(150)
-		SendInput {e}
-   	lSleep(100)
-		SendInput {q}
-      lSleep(20)
-      SendInput {f8}
-      lSleep(20)
-      SendInput {RButton Down}
-		BlockInput, Off
-		loop 110 {
-			SendInput {LButton}
-			lSleep(10)
+		else If (ErrorLevel == 1)
+			{
+;-------------------------- Hydro Long --------------------------
+			BlockInput, On
+			MoveMouse(-1000,-255)
+			lSleep(100)
+			SendInput {[ Down}
+			SendInput, {Space Down}
+			lSleep(50)
+			SendInput, {Space Up}
+			lSleep(50)
+			SendInput {[}
+			lSleep(5)
+			SendInput {[ Down}
+			SendInput {W Down}
+			lSleep(261)
+			SendInput {W Up}
+			lSleep(100)
+			MoveMouse(-949,450)
+			lSleep(300)
+			SendInput {q}
+			lSleep(340)
+			SendInput {5}
+			lSleep(100)
+			MoveMouse(-560,-185)
+			lSleep(150)
+			SendInput {e}
+   			lSleep(100)
+			SendInput {q}
+    			lSleep(20)
+    			SendInput {f8}
+     			lSleep(20)
+      			SendInput {RButton Down}
+			BlockInput, Off
+			loop 110 {
+				SendInput {LButton}
+				lSleep(10)
 			}
-		lSleep(110)
-		SendInput {[ Up}
-      SendInput {RButton Up}
-		Return
+			lSleep(110)
+			SendInput {[ Up}
+      			SendInput {RButton Up}
+	Return
 	
 	}
 Return
