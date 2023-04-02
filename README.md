@@ -9,4 +9,7 @@
 AHK is a versatile tool that can be used for a wide range of automation tasks :)
 <br>
 </br>
+Most will be through AHK (if not all), which closely follows C++ in structure
+<br>
+</br>
 ![](https://i.imgur.com/4KizCpq.jpeg)
