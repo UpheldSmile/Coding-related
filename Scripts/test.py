@@ -24,8 +24,6 @@ def start_macro():
     # After 1 hour, initiate the picture search
     find_picture()
 
-Bind the script to a key (e.g., F1)
 keyboard.add_hotkey('F1', start_macro)
 
-Keep the script running
 keyboard.wait('esc')
