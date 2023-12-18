@@ -1,3 +1,4 @@
+# This script actually works lmfao
 import time
 import pyautogui
 import keyboard
