@@ -15,6 +15,4 @@ To get access to these please go to the 'Scripts' tree
 </br>
 This is not very tailored to my desired sector in CompSci but is what I enjoy to do and others in my community have recommended to show off the work I do, even though very niche. If wanting to look at more Info Sec related - go to my public repo relating to virtual networks
 <br>
-</br>
-![](https://i.imgur.com/4KizCpq.jpeg)
-meow
+
