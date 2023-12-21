@@ -1,3 +1,4 @@
+# This program is just a for fun program, would still use NMAP but is a different approach to go about enumeration
 import socket
 
 def scan_ports(ip, ports):
